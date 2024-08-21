@@ -1,90 +1,80 @@
 {
-	// Основные настройки редактора
-	"window.openFilesInNewWindow": "default",
+	"files.autoSave": "afterDelay",
+
+	//Main editor settings
+	"window.openFilesInNewWindow": "off",
 	"editor.tabSize": 4,
-	"editor.folding": true,
-	"editor.insertSpaces": true,
+	"editor.folding": false,
+	"editor.insertSpaces": false,
 	"editor.smoothScrolling": true,
 	"editor.minimap.enabled": false,
 	"editor.detectIndentation": true,
 	"editor.suggestSelection": "first",
 	"editor.multiCursorModifier": "ctrlCmd",
-	"workbench.tree.indent": 14,
-	"workbench.tree.expandMode": "doubleClick",
+	"window.zoomLevel": 0.5,
 	"workbench.tree.renderIndentGuides": "none",
-	// "workbench.tree.stickyScrollMaxItemCount": 15,
-
-	// Настройки переноса слов
+	// Wrapping
 	"editor.wordWrap": "bounded",
 	"editor.wrappingIndent": "same",
-	"editor.wordWrapColumn": 200,
+	"editor.wordWrapColumn": 80,
 
-	// Прокрутка за пределы последней строки
+	//Определяет, будет ли редактор прокручиваться за пределы последней строки.
 	"editor.scrollBeyondLastLine": true,
-
-	// Связанные редактирования тегов
+	// Rename tags
 	"editor.linkedEditing": true,
 
-	// Автоматическое закрытие тегов
+	// Auto closing tags
 	"html.autoClosingTags": true,
 	"javascript.autoClosingTags": true,
 	"typescript.autoClosingTags": true,
 
-	// Отображение символов
+	//Определяет, должен ли редактор отображать управляющие символы.
 	"editor.renderControlCharacters": false,
 
-	// Подсветка неоднозначных символов
+	//Управляет выделением символов, которые можно спутать с основными символами ASCII, кроме тех, которые являются общими для текущего пользовательского языкового стандарта.
 	"editor.unicodeHighlight.ambiguousCharacters": false,
 
-	// Быстрые подсказки
+	"editor.quickSuggestionsDelay": 0,
 	"html.completion.attributeDefaultValue": "singlequotes",
 
-	// Внешний вид
+	//Appearance
 	"editor.bracketPairColorization.enabled": false,
-	"editor.glyphMargin": true,
+	"editor.glyphMargin": false,
 	"editor.scrollbar.horizontal": "hidden",
 	"editor.scrollbar.vertical": "hidden",
 	"workbench.productIconTheme": "fluent-icons",
 	"window.density.editorTabHeight": "compact",
+	"workbench.colorTheme": "Bearded Theme HC Minuit",
 	"editor.accessibilitySupport": "off",
-	"symbols.hidesExplorerArrows": false,
-	"workbench.iconTheme": "catppuccin-macchiato",
+	"window.commandCenter": false,
 	"workbench.layoutControl.enabled": false,
-	"workbench.editor.editorActionsLocation": "hidden",
-	"workbench.editor.empty.hint": "hidden",
+	"symbols.hidesExplorerArrows": false,
+	"workbench.iconTheme": "moxer-icons",
 
-	// Настройки курсора
+	// Cursor
 	"editor.cursorBlinking": "expand",
 	"editor.cursorStyle": "line",
 	"editor.cursorSmoothCaretAnimation": "on",
+
+	// Font
+	"editor.fontSize": 13,
+	"editor.lineHeight": 23,
+	"editor.fontLigatures": false,
 	"editor.renderLineHighlight": "none",
-
-	// Настройки шрифта
-	"editor.fontSize": 15,
-
-	"editor.lineHeight": 1.8,
-
-	"editor.fontWeight": "normal",
-	"editor.formatOnType": true,
-
-	"editor.fontLigatures": true,
-	"editor.fontFamily": "JetBrains Mono, Fira Code, sans-serif",
+	"editor.fontFamily": "Operator mono lig, Iosevka NFM, JetBrains Mono, Monaspace Neon, Maple Mono, MonoLisa, Ubuntu Mono, DejaVu Sans Mono, Fira Code, monoki, Hasklig, PragmataPro, IBM Plex Mono, Victor Mono, Roboto Mono, monospace",
 	"editor.inlayHints.fontFamily": "PragmataPro",
-	"chat.editor.fontFamily": "PragmataPro",
-	"editor.codeLensFontFamily": "PragmataPro",
-	"debug.console.fontFamily": "PragmataPro",
 
-	// Кастомизация подсветки синтаксиса
 	"editor.tokenColorCustomizations": {
 		"textMateRules": [
 			{
 				"scope": [
+					//following will be in italic
 					"comment",
-					"entity.name.type.class",
-					"keyword",
-					"constant",
-					"storage.modifier",
-					"storage.type.class.js"
+					"entity.name.type.class", //class names
+					"keyword", //import, export, return…
+					"constant", //String, Number, Boolean…, this, super
+					"storage.modifier", //static keyword
+					"storage.type.class.js" //class keyword
 				],
 				"settings": {
 					"fontStyle": "italic"
@@ -92,6 +82,7 @@
 			},
 			{
 				"scope": [
+					//following will be excluded from italics (VSCode has some defaults for italics)
 					"invalid",
 					"keyword.operator",
 					"constant.numeric.css",
@@ -105,34 +96,36 @@
 			}
 		]
 	},
+	"workbench.tree.indent": 15,
+	"workbench.tree.expandMode": "doubleClick",
 
-	// Настройки терминала
-	"terminal.integrated.fontFamily": "JetBrains Mono",
-	"terminal.integrated.fontSize": 13,
+	//Terminal
+	"terminal.integrated.fontFamily": "Iosevka NFM",
+	"terminal.integrated.fontSize": 15,
 	"terminal.integrated.tabs.enabled": false,
-	"terminal.integrated.cursorStyle": "line",
 
-	// Настройки обозревателя
+	//Explorer
 	"explorer.confirmDelete": false,
-	"explorer.confirmDragAndDrop": false,
 	"explorer.compactFolders": false,
-	"workbench.editor.tabSizing": "fit",
+	"explorer.confirmDragAndDrop": false,
+	//Разрешить уменьшение размера вкладок, когда доступного места недостаточно для отображения всех вкладок одновременно.
+	"workbench.editor.tabSizing": "shrink",
 	"workbench.startupEditor": "newUntitledFile",
 
-	// Настройки отладки
+	//Debug
 	"debug.toolBarLocation": "hidden",
 	"debug.focusWindowOnBreak": false,
 	"debug.showInlineBreakpointCandidates": false,
 	"debug.showBreakpointsInOverviewRuler": false,
 
-	// Настройки Emmet
+	// Emmet
 	"emmet.includeLanguages": {
 		"blade": "html",
 		"javascript": "javascriptreact"
 	},
 	"emmet.triggerExpansionOnTab": true,
 
-	// Настройки форматирования
+	//Format
 	"prettier.semi": false,
 	"prettier.useTabs": true,
 	"editor.formatOnSave": true,
@@ -144,16 +137,21 @@
 	"[prisma]": {
 		"editor.defaultFormatter": "Prisma.prisma"
 	},
+	//Включите круглые скобки вокруг единственного параметра функции стрелки
 	"prettier.arrowParens": "avoid",
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	// "files.associations": { "*.scss": "postcss", "*.module.scss": "postcss" },
 	"editor.inlineSuggest.enabled": true,
 
-	// Настройки для Laravel
+	//Laravel
 	"[blade]": {
 		"editor.defaultFormatter": "onecentlin.laravel-blade"
 	},
+	"[php]": {
+		"editor.defaultFormatter": "DEVSENSE.phptools-vscode"
+	},
 
-	// Настройки для Breadcrumbs
+	//Breadcrumbs
 	"breadcrumbs.icons": false,
 	"breadcrumbs.showKeys": false,
 	"breadcrumbs.showFiles": false,
@@ -169,17 +167,19 @@
 	"breadcrumbs.showEnumMembers": false,
 	"breadcrumbs.showConstructors": false,
 
-	// Настройки для JS и TS
+	//JS & TS
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"typescript.preferences.quoteStyle": "single",
 	"javascript.preferences.quoteStyle": "single",
 	"javascript.format.semicolons": "remove",
 	"typescript.format.semicolons": "remove",
+	// Использование экспериментальных декораторов в JS/TS
 	"js/ts.implicitProjectConfig.experimentalDecorators": true,
 
-	// Настройки проверки орфографии
+	//Spell checker
 	"cSpell.language": "en,ru",
+	"cSpell.userWords": [],
 	"cSpell.enabled": true,
 	"cSpell.enableFiletypes": [
 		"blade",
@@ -192,73 +192,47 @@
 		"vue"
 	],
 
-	// Разрешенные символы для Unicode Highlight
 	"editor.unicodeHighlight.allowedCharacters": {
 		"а": true,
 		"с": true,
 		"Т": true,
 		"б": true,
-		"е": true,
-		" ": true
+		"е": true
 	},
 	"editor.hideCursorInOverviewRuler": true,
 	"git.enableSmartCommit": true,
 
-	// Исключаемые файлы
 	"files.exclude": {
 		"**/.expo": true,
 		"**/.expo-shared": true,
 		"**/.idea": true,
-		"**/.nuxt": true
+		"**/.next": true,
+		"**/.nuxt": true,
+		"**/dist": true
 	},
 
-	// Прочие настройки
+	// OTHER
+	// Язык по умолчанию для новых файлов
 	"files.defaultLanguage": "plaintext",
+	// Игнорировать пробелы при сравнении в редакторе diff
 	"diffEditor.ignoreTrimWhitespace": false,
+	// Открытие не доверенных файлов без предупреждения
 	"security.workspace.trust.untrustedFiles": "open",
+	// Автоматически изменять предложение автозаполнения на основе предыдущего выбора
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	// Подтверждение перед закрытием окна только при использовании клавиатуры
 	"window.confirmBeforeClose": "keyboardOnly",
+	// Не открывать репозиторий в родительских папках
 	"git.openRepositoryInParentFolders": "never",
-	"editor.gotoLocation.multipleDefinitions": "goto",
-	"editor.stickyScroll.scrollWithEditor": false,
-	"workbench.tree.enableStickyScroll": false,
-	"editor.stickyScroll.enabled": false,
-	"redhat.telemetry.enabled": false,
-	"github.copilot.editor.enableAutoCompletions": true,
-	"window.commandCenter": false,
-	"workbench.editor.customLabels.patterns": {
-		"**/app/**/[[]*[]]/[[]*[]]/page.tsx": "${dirname(2)}/${dirname(1)}/${dirname}/page.tsx",
-		"**/app/**/[[]*[]]/page.tsx": "${dirname(1)}/${dirname}/page.tsx",
-		"**/app/**/page.tsx": "${dirname}/page.tsx",
-		"**/app/**/[[]*[]]/[[]*[]]/layout.tsx": "${dirname(2)}/${dirname(1)}/${dirname}/layout.tsx",
-		"**/app/**/[[]*[]]/layout.tsx": "${dirname(1)}/${dirname}/layout.tsx",
-		"**/app/**/layout.tsx": "${dirname}/layout.tsx"
-	},
-	"cSpell.userWords": [
-		"clsx",
-		"recaptcha",
-		"sitekey",
-		"testid",
-		"экспереминтерировать"
-	],
-	"markdown.updateLinksOnFileMove.enabled": "always",
-	"javascript.experimental.updateImportsOnPaste": true,
-	"typescript.experimental.updateImportsOnPaste": true,
-	"markdown.experimental.updateLinksOnPaste": true,
-	"cSpell.autoFormatConfigFile": true,
-	"workbench.statusBar.visible": true,
-	"files.autoSave": "afterDelay",
 
-	// Live SCSS Compiler
-	"liveSassCompile.settings.formats": [
-		{
-			"format": "expanded",
-			"extensionName": ".css",
-			"savePath": "src/styles/css/"
-		}
-	],
-	"liveSassCompile.settings.showOutputWindowOn": "None",
-	"workbench.colorTheme": "One Dark",
-	"liveServer.settings.donotShowInfoMsg": true,
-	"editor.mouseWheelZoom": true
+	// Поведение при обнаружении нескольких определений
+	"editor.gotoLocation.multipleDefinitions": "goto",
+	// Скрыть подсказку в пустом редакторе
+	"workbench.editor.empty.hint": "hidden",
+	"workbench.colorCustomizations": {
+		"terminal.background": "#00000000"
+	},
+	"workbench.settings.applyToAllProfiles": ["workbench.colorCustomizations"],
+	"window.titleBarStyle": "custom",
+	"vscode_vibrancy.opacity": 0.9
 }
