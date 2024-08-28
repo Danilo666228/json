@@ -12,6 +12,7 @@
 	"editor.suggestSelection": "first",
 	"editor.multiCursorModifier": "ctrlCmd",
 	"window.zoomLevel": 0.5,
+
 	"workbench.tree.renderIndentGuides": "none",
 	// Wrapping
 	"editor.wordWrap": "bounded",
@@ -44,7 +45,7 @@
 	"editor.scrollbar.vertical": "hidden",
 	"workbench.productIconTheme": "fluent-icons",
 	"window.density.editorTabHeight": "compact",
-	"workbench.colorTheme": "Bearded Theme HC Minuit",
+	"workbench.colorTheme": "Atom Material Theme",
 	"editor.accessibilitySupport": "off",
 	"window.commandCenter": false,
 	"workbench.layoutControl.enabled": false,
@@ -57,12 +58,14 @@
 	"editor.cursorSmoothCaretAnimation": "on",
 
 	// Font
+	"editor.fontWeight": "normal",
 	"editor.fontSize": 13,
-	"editor.lineHeight": 23,
+	"editor.fontVariations": true,
+	"editor.lineHeight": 25,
 	"editor.fontLigatures": false,
 	"editor.renderLineHighlight": "none",
-	"editor.fontFamily": "Operator mono lig, Iosevka NFM, JetBrains Mono, Monaspace Neon, Maple Mono, MonoLisa, Ubuntu Mono, DejaVu Sans Mono, Fira Code, monoki, Hasklig, PragmataPro, IBM Plex Mono, Victor Mono, Roboto Mono, monospace",
-	"editor.inlayHints.fontFamily": "PragmataPro",
+	"editor.fontFamily": "JetBrains Mono, Operator mono lig, Iosevka NFM, Monaspace Neon, Maple Mono, MonoLisa, Ubuntu Mono, DejaVu Sans Mono, Fira Code, monoki, Hasklig, PragmataPro, IBM Plex Mono, Victor Mono, Roboto Mono, monospace",
+	"editor.inlayHints.fontFamily": "JetBrains Mono",
 
 	"editor.tokenColorCustomizations": {
 		"textMateRules": [
@@ -96,12 +99,10 @@
 			}
 		]
 	},
-	"workbench.tree.indent": 15,
-	"workbench.tree.expandMode": "doubleClick",
 
 	//Terminal
-	"terminal.integrated.fontFamily": "Iosevka NFM",
-	"terminal.integrated.fontSize": 15,
+	"terminal.integrated.fontFamily": "JetBrains Mono",
+	"terminal.integrated.fontSize": 13,
 	"terminal.integrated.tabs.enabled": false,
 
 	//Explorer
@@ -109,7 +110,7 @@
 	"explorer.compactFolders": false,
 	"explorer.confirmDragAndDrop": false,
 	//Разрешить уменьшение размера вкладок, когда доступного места недостаточно для отображения всех вкладок одновременно.
-	"workbench.editor.tabSizing": "shrink",
+	"workbench.editor.tabSizing": "fit",
 	"workbench.startupEditor": "newUntitledFile",
 
 	//Debug
@@ -234,5 +235,7 @@
 	},
 	"workbench.settings.applyToAllProfiles": ["workbench.colorCustomizations"],
 	"window.titleBarStyle": "custom",
-	"vscode_vibrancy.opacity": 0.9
+	"vscode_vibrancy.opacity": 0.9,
+	"workbench.tree.indent": 15,
+	"workbench.tree.expandMode": "doubleClick"
 }
